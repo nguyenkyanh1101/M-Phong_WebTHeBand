@@ -1,0 +1,59 @@
+/* pC */
+@media(min-width:1024px)
+{
+    /* chi haot dong tren PC thi vietr code vao day*/
+
+}
+
+/* table */
+@media(min-width:740px)and(max-width:1023)
+{
+    /*  chi haot dong tren mtbang  
+    thi viet code vao day*/
+}
+
+
+
+/* mobile */
+@media(max-width: 740px){
+    #nav > li {
+        display: block; 
+    }
+    #header{
+        overflow: hidden;
+    }
+
+    #nav >li:first-child{
+        display: inline-block;
+    }
+    
+    #nav .subnav{
+        position: initial;
+        background-color: black;
+
+    }
+    #nav .subnav a{
+        color: white;
+        padding: 0 40px;
+    }
+
+    #header .menu-btn{
+        display: block;
+
+    }
+    #header .search-btn{
+        display: none;
+        
+    }
+    #nav{
+        display: block;
+    }
+    #content .member-item{
+        margin-top: 30px;
+        width: 100%;
+    }
+    #content .member-avatar{
+        width: 50%;
+    }
+
+}

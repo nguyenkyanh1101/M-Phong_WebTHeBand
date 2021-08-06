@@ -1,0 +1,492 @@
+/* reset CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* giuAlt r click chuot */
+/* 
+Tu ngoai vao trong-tu tren xuong duoi
+-TQ-chi tiet
+Vi tri
+kich thuoc
+mausac
+kieu dang Chu
+*/
+/* class dung chung */
+.clear{
+    clear:both;
+}
+.text-white{
+    color: white !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+/* viet o cuoi dong */
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+.mt8{
+    margin-top: 8px !important;
+}
+.mt16{
+    margin-top: 16px !important;
+}
+.right{
+    float: right !important;
+}
+
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 33.333333%;
+}
+.col-hafl{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+.btn{
+    border: none;
+    margin-top: 15px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding:11px 16px;
+    display: inline-block
+    
+}
+.btn:hover{
+    color: black;
+    background-color: blueviolet;
+    cursor: pointer;
+    
+}
+/* main */
+#main{
+
+}
+
+#header {
+    
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    
+
+}
+#nav{
+    display: inline-block;
+    
+}
+#nav ,.subnav{
+    list-style-type: none;
+    
+
+}
+
+#nav > li {display: inline-block;}
+
+#nav li {
+    
+    
+    /* block :giu chat khoi=> dat duoc kich thuoc */
+    
+    /* tat ca 4 the sẽ ko bị đẩy xuống nữa,cố định tại Header
+    => đẩy list con xuống dòng dưới*/
+    position: relative;
+    
+
+}
+/* > > >  thẻ a la con trực tiếp của li la con trực tiếp của nav */
+#nav >li >a{
+    color: white;
+    text-transform: uppercase;
+
+}
+#nav li a{
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding-right: 20px;
+    padding-left: 20pX;
+    /* padding-top:20px ;
+    padding-bottom: 20px; */
+    display: block;
+    
+
+}
+#nav li:hover .subnav {
+    display: block
+}
+
+#nav .subnav li:hover a ,
+#nav > li:hover > a{
+    color: black;
+    background-color: rgb(192, 189, 189);
+    
+}
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    /* sau khi list con đẩy xuống dưới thì dùng absolute để cố định theo thẻ cha */
+    position:absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    
+    
+
+}
+#nav .subnav a{
+    color: black;
+    
+    padding:0 12px;
+
+}
+#nav .nav-arrow{
+    font-size: 10px;
+}
+#header .menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .menu-btn,
+#header .search-btn{
+    float: right;
+
+}
+#header .menuicon,
+#header .a{
+    color: azure;
+    font-size: 15px;
+    line-height: 46px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+#header .menu-btn:hover,
+#header .search-btn:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+
+
+
+
+
+
+#slider {
+    position: relative;
+    /* height: 500px;
+    width: 100%; hoac dung*/
+    /* min-height: 500px; */
+    background-color: rgb(71, 68, 68);
+    margin-top: 46px;
+    padding-top: 50%;
+    background:url("/TH_taoWeb/assets/img/slider/chicago.jpg") top center / cover no-repeat;
+}
+#slider .text-content{
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center; 
+    
+
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+
+}
+#slider .text-descrip{
+    font-size: 15px;
+
+}
+
+
+#content {
+
+}
+#content .content-section{
+    /* ipad */
+    padding-left: 16px;
+    padding-right:16px;
+    max-width: 100%;
+    /* ipad */
+    width: 800px;
+    padding-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+    
+}
+#content .section-subheading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style: italic;
+    opacity: 0.6;
+    /* opacity0-1 */
+}
+#content .about{
+    /* can giua : justify */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content .member-list{
+    margin-top: 48px;
+    margin-bottom: 80px;
+    
+
+}
+
+#content .member-name{
+    font-size: 15px;
+    
+}
+#content .member-avatar{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.tour-section{
+    background-color: black;
+    padding-bottom: 100px;
+}
+/* ticket list */
+.ticket-list li{
+    list-style-type: none;
+    color: green;
+    padding: 11px 16px;
+    border-bottom: 1px solid gray;
+}
+.ticket-list{
+    background-color: white; 
+    margin-top: 40px;
+}
+.ticket-list .sold-out{
+    background-color: red;
+    padding:4px 4px ;
+    margin-left: 16px;
+
+}
+.ticket-list .SL-conlai{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+
+
+}
+/* place */
+.place-list{
+    margin-top: 32px;
+    
+    margin-bottom: 46px;
+}
+
+.place-img{
+    display: block;
+    width: 100%;
+
+}
+/* di chuont vao no mo */
+.place-img:hover{
+    opacity: 0.6;
+
+}
+.place-body{
+    font-size: 15px;
+    background-color: white;
+    padding:15px;
+
+}
+.place-heading{
+
+}
+.palce-time{
+    margin-top: 15px;
+    color: gray;
+
+}
+.place-dcs{
+    margin-top: 15px;
+    line-height: 1.5;
+
+    
+}
+
+/* contact */
+.contact-content{
+    margin-top: 48px;
+}
+.contact-infor{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-infor i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid gray;
+    width: 100%;
+
+}
+
+/* Map */
+.map-section img{
+    margin-top: 100px;
+    width: 100%;
+}
+
+
+
+
+/* section foot */
+#footer {
+    text-align: center;
+    padding:64px 16px
+    
+}
+.modal.open{
+    display: flex;
+}
+.modal{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(0, 0,0 ,0.4) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container{
+    background: white;
+    width: 800px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalcomein ease 1s;
+    opacity: 1;
+    
+}
+.modal .modal-header{
+    background-color: burlywood;
+    height: 100px;
+    /* text-align: center;
+    line-height: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+}
+.modal .caitui{
+    margin-right: 16px;
+}
+.modal .ti-close:hover{
+    cursor: pointer;
+    
+}
+.modal .ti-close{
+    position: absolute;
+    right: 0;
+    color: white;
+    padding: 10px;
+}
+.modal .modal-body{
+    padding: 20px;
+}
+.modal-lable{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+.modal-input{
+    border:1px, #ccc;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.modal #buy-ticket:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.modal #buy-ticket{
+    border: none;
+    width: 100%;
+    height: 40px;
+    background-color:rgb(181, 151, 202);
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.modal-help {
+    padding: 16px;
+    text-align: right;
+}
+.modal-help a {
+    color: lawngreen;
+}
+
+@keyframes modalcomein{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+
