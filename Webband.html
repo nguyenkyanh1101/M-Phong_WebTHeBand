@@ -287,9 +287,16 @@
 
     </script>
     <script>
-        var buyBtns=document.querySelectorAll('.JS-buyticket')
-        var modal=document.querySelector('.JS-modal')
-        var modalClose=document.querySelector('.JSmodalClose')
+        var buyBtns=document.querySelectorAll('.JS-buyticket')   //chọn ra 1 mảng gồm 3 class JS-buyticket
+        var modal=document.querySelector('.JS-modal')           // chọn ra thẻ chứa claass JS-modal
+        var modalClose=document.querySelector('.JSmodalClose')  // chọn ra thẻ chứa class JSmodalClose ( icon X )
+        
+        // ---------------------- lắng nghe sự kiện click------------------------
+        for(var buyBtn of buyBtns){                  // biến buyBTn sẽ lặp qua từng thẻ JS-buyticket
+            buyBtn.addEventListener('click',showBuytickets)
+        }
+        modalClose.addEventListener('click',hiddenBuyTK)
+        
         //---------------- Khi click thì nó sẽ chạy hàm dưới-----------------------
         function showBuytickets(){
             modal.classList.add('open')
@@ -297,13 +304,6 @@
         function hiddenBuyTK(){
             modal.classList.remove('open')
         }
-        // ---------------------- lắng nghe sự kiện click------------------------
-        for(var buyBtn of buyBtns){
-            buyBtn.addEventListener('click',showBuytickets)
-        }
-
-        modalClose.addEventListener('click',hiddenBuyTK)
-        
 
 
     </script>
